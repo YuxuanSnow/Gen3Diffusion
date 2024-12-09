@@ -10,8 +10,8 @@
 ![](https://github.com/YuxuanSnow/Gen3Diffusion/blob/main/assets/teaser_video.gif)
 
 ## News :triangular_flag_on_post:
-- [2024/11/28] Inference Code release. 
-- [2024/11/28] Gen-3Diffusion paper is available on Arxiv.
+- [2024/12/9] Inference Code release. 
+- [2024/12/9] Gen-3Diffusion paper is available on Arxiv.
 
 ## Key Insight :raised_hands:
 - 2D foundation models are powerful but output lacks 3D consistency!
