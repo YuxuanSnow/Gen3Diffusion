@@ -87,6 +87,27 @@ python infer.py --test_imgs test_imgs_avatar --output output_avatar --checkpoint
 python infer_mesh.py --test_imgs test_imgs_avatar --output output_avatar --checkpoints checkpoints_avatar --mesh_quality high
 ```
 
+## Training
+```
+# Object training
+# render multiview RGB images from object mesh (required Blender 4.1.1)
+blender-4.1.1-linux-x64/blender -b -P render_bpy_objaverse.py -- --subject 000-001/112c059282cf4511a01fd27211edcae8
+
+# optional, pretrain Multiview Diffusion (if your data is very different to pretrained distribution)
+accelerate launch train_MultiviewDiffusion_diffusion.py
+
+# optional, pretrain Multiview Reconstruction with Diffusion (if your data is very different to pretrained distribution)
+accelerate launch train_MultiviewReconstructor_diffusion.py
+
+# Core training script of joint 2D and 3D diffusion training.
+accelerate launch train_MVDMVR_joint.py
+```
+
+```
+# Avatar training
+# please refer to https://github.com/YuxuanSnow/Human3Diffusion
+```
+
 ## Citation :writing_hand:
 
 ```bibtex
